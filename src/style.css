@@ -1,101 +1,19 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  height: 100%;
-}
-
-
-
-body {
-  height: 90%;
-}
-
-h1 {
-  color: white;
-  padding: 20px;
-  margin: 0 auto;
-  font-size: 3.2em;
-  line-height: 1.1;
-  width: 400px;
-  border-radius: 20px;
-  background-color:pink;
-}
-
-
-
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  html,
+  body {
+    @apply scroll-smooth;
   }
 }
 
-.p {
-  border: solid rgb(21, 208, 0);
-  width: auto;
-  margin: 20px;
-  padding: 0;
-  text-align: center;
-  gap: 1px;
-  font-size: 30px;
-  font-style: bold;
-  gap: 30rem;
-}
-
-
-
-
-
-.buttons {
-  background: #FF4742;
-  border: 1px solid #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-}
-
-.buttons,
-.buttons {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
-}
-
-.buttons{
-  opacity: .5;
+@layer components {
+  .btn {
+    @apply text-[#FF4742] border border-[#FF4742] rounded-md px-8 py-2 shadow-lg;
+  }
 }
