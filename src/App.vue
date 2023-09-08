@@ -48,9 +48,13 @@ export default {
 
       if (this.player1Choice === this.player2Choice) {
         this.result = "เสมอ";
-      } else if (this.player1Choice === "ความรัก" || this.player2Choice === "ความรัก") {
+      } else if (this.player1Choice === "ความรัก"){
         this.result = "ความรักชนะเสมอ!";
         this.player1Score += 1;
+      
+      } else if (this.player2Choice === "ความรัก"){
+        this.result = "ความรักชนะเสมอ!";
+        this.player2Score += 1;
       } else if (
         (this.player1Choice === "ค้อน" && this.player2Choice === "กรรไกร") ||
         (this.player1Choice === "กรรไกร" && this.player2Choice === "กระดาษ") ||
